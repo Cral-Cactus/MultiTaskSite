@@ -20,6 +20,12 @@ function calculate() {
   }
 }
 
+function deleteLastNumber() {
+  const currentValue = input.value;
+  const newValue = currentValue.substring(0, currentValue.length - 1);
+  input.value = newValue;
+}
+
 document.addEventListener('keydown', function (event) {
   if (!isNaN(event.key) || event.key === '.') {
     appendValue(event.key);
@@ -29,6 +35,8 @@ document.addEventListener('keydown', function (event) {
     appendValue(event.key);
   } else if (event.key === 'Escape') {
     clearInput();
+  } else if (event.key === 'Backspace') {
+    deleteLastNumber();
   }
 });
 
