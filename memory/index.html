@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/88d574b485.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="go-back">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span id="go-back-text">Go back</span>
+          </div>
+      
+          <script>
+            document.getElementById('go-back').addEventListener('click', function () {
+              window.location.href = '../index.html';
+            });
+          </script>
+        <div class="game-grid"></div>
+        <button class="reset-button"><i class="fa-solid fa-power-off"></i> Reset Game</button>
+        <div class="message-container"></div>
+    </div>
+
+    <script src="memory.js"></script>
+</body>
+
+</html>

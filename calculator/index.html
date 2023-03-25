@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/88d574b485.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="calculator">
+      <div id="go-back">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span id="go-back-text">Go back</span>
+      </div>
+  
+      <script>
+        document.getElementById('go-back').addEventListener('click', function () {
+          window.location.href = '../index.html';
+        });
+      </script>
+      
+      <input type="text" id="input" readonly>
+      <div class="buttons">
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendValue('+')">+</button>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendValue('-')">-</button>
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendValue('*')">*</button>
+        <button class="linebreak" onclick="appendValue('0')">
+          <span class="text">0</span>
+        </button>
+        <button onclick="appendValue('.')">.</button>
+        <button onclick="clearInput()">C</button>
+        <button onclick="appendValue('/')">/</button>
+        <button class="linebreak" onclick="calculate()">
+          <span class="text">=</span>
+        </button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

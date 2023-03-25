@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/88d574b485.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="go-back">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span id="go-back-text">Go back</span>
+    </div>
+
+    <script>
+        document.getElementById('go-back').addEventListener('click', function () {
+            window.location.href = '../index.html';
+        });
+    </script>
+    
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Quiz Game</h1>
+            <p>Test your knowledge</p>
+        </div>
+        <div class="quiz-body">
+            <div class="question-container">
+                <h2 id="question"></h2>
+                <div class="timer-container">
+                    <p>Time Left: <span id="timer"></span></p>
+                </div>
+                <div class="options-container">
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </div>
+            </div>
+            <div class="result-container">
+                <p id="result"></p>
+            </div>
+            <div class="score-container">
+                <p>Score: <span id="score">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>

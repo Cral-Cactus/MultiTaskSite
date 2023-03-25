@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/88d574b485.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="quote-container">
+    <div id="go-back">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span id="go-back-text">Go back</span>
+    </div>
+
+    <script>
+      document.getElementById('go-back').addEventListener('click', function () {
+        window.location.href = '../index.html';
+      });
+    </script>
+
+    <p id="quote-text">Loading...</p>
+    <p id="quote-author"></p>
+    <button id="generate-btn" onclick="generateQuote()">Generate Quote</button>
+  </div>
+
+  <script src="quote.js"></script>
+</body>
+
+</html>
